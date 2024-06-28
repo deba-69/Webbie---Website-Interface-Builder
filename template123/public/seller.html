@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Dashboard</title>
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="css/seller.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/search.css">
+</head>
+<body>
+
+    <img src="img/card1.png" alt="na" class="loader">
+
+    <div class="alert-box">
+        <img src="img/error.png" alt="NaN" class="alert-img">
+        <p class="alert-msg">error message</p>
+    </div>
+
+    <img src="img/dark-logo.png" alt="" class="logo">
+
+    <div class="become-seller hide">
+        <p class="heading">become a seller</p>
+        <p class="des">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo ipsum ratione unde nesciunt odit aperiam minus ducimus minima, itaque enim? Molestiae accusantium ad porro eveniet, sint dolore commodi voluptates maiores illo repellendus accusamus quasi neque culpa nemo quas voluptatum, molestias vel possimus, iste magnam aperiam odit. Nam non error molestias eligendi iste dicta, numquam voluptatem fuga asperiores neque voluptate, dolor blanditiis, at saepe maxime unde assumenda vero illum. Ipsa atque excepturi non quisquam, qui aliquid optio? Explicabo nesciunt, sequi cupiditate quasi numquam minima magni architecto nisi unde ipsum corporis excepturi ullam accusamus repudiandae quod est suscipit fugit alias aut asperiores!</p>
+        <button class="btn" id="apply-btn">apply for seller</button>
+    </div>
+
+    <div class="apply-form hide">
+        <input type="text" id="business-name" placeholder="business name / company name / shop name">
+        <textarea id="business-add" placeholder="address"></textarea>
+        <textarea id="about" placeholder="about"></textarea>
+        <input type="text" id="number" placeholder="number">
+
+        <button class="submit-btn" id="apply-form-btn">apply</button>
+    </div>
+
+    <div class="product-listing">
+        <div class="add-product">
+            <p class="add-product-title">add product</p>
+            <button class="btn" onclick="location.href = 'addProduct.html'">add product</button>
+        </div>
+        <img src="img/no.png" alt="na" class="no-product-image hide">
+
+        <div class="delete-alert">
+            <div class="alert">
+                <button class="close-btn"><img src="img/close.png" alt=""></button>
+                <img src="img/delete-warning.png" alt="" class="delete-svg">
+                <p class="text">are you sure ? you want to delete this product</p>
+                <button class="delete-btn">delete</button>
+            </div>
+
+        </div>
+
+        <div class="productcontainer">
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="tag">Draft</span>
+                    <img src="img/card10.png" alt="" class="product-thumb">
+                    <button class="card-action-btn edit-btn"><img src="img/edit.png" alt=""></button>
+                    <button class="card-action-btn open-btn"><img src="img/open.png" alt=""></button>
+                    <button class="card-action-btn delete-popup-btn" onclick="openDeletePopup()"><img src="img/delete.png" alt=""></button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">brand</h2>
+                    <p class="product-short-des"> a short line about...</p>
+                    <span class="price">$20</span>
+                    <span class="actual-price">$40</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/seller.js"></script>
+    <script src="js/createProduct.js"></script>
+    
+</body>
+</html>

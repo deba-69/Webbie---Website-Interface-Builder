@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #dcdcdc;
+}*/
+
+.container{
+    position: relative;
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(250px,1fr));
+    grid-gap : 20px;
+    padding: 20px;
+}
+
+.container .card{
+    width : 100%;
+    height: 450px;
+    background: #fff;
+}
+
+.container .card .imgbx{
+    position: relative;
+    width: 100%;
+    height: 310px;
+    overflow: hidden;
+}
+
+.action li .img-set{
+    position: relative;
+    height: 40px;
+    width: 40px;
+}
+.action li .img-set img{
+    position: absolute;
+    object-fit: cover;
+}
+
+.container .card .imgbx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+    transform-origin : right;
+
+}
+
+.container .card:hover .imgbx img{
+    transform: scale(1.5);
+
+}
+
+.action{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.container .card:hover .card-action-btn{
+    
+    opacity: 1;
+    pointer-events: all;
+}
+.card-action-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    transition: 0.5s;
+    background: #fff;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.card-action-btn img{
+    height: 18px;
+}
+
+.open-btn{
+    top: 60px;
+}
+
+.delete-popup-btn{
+    top: 110px;
+    background: #f25252;
+}
+
+.action li{
+    position: relative;
+    list-style: none;
+    width : 40px;
+    height: 40px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    cursor: pointer;
+    transform: translateX(60px);
+}
+
+
+.action li:nth-child(2)
+{
+    transition-delay: 0.15s;
+}
+
+.action li:nth-child(3)
+{
+    transition-delay: 0.30s;
+}
+.container .card:hover .action li{
+    transform: translateX(0px);
+}
+
+.action li:hover{
+    background: #fff;
+    color: #fff;
+}
+
+.action li span{
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%) translateX(-20px);
+    white-space: nowrap;
+    padding: 4px 6px;
+    background: #fff;
+    color: #333;
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.action li:hover span{
+    transform: translateY(-50%) translateX(0px);
+    opacity: 1;
+}
+
+.action .li span::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -4px;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    transform: translateY(-50%) rotate(45deg);
+}
+.container .card .content{
+    padding: 10px;
+}
+
+.container .card .content .product-name h1{
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    margin: 5px 0;
+}
+
+.container .card .content .price_rating{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .card .content .price_rating h2{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.price_rating .a-price{
+    text-decoration: line-through;
+    color: #aeaeae;
+}
+.price_rating .s-price{
+    color: #383838;
+}
+
+.price_rating .discount{
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
